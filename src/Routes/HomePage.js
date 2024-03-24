@@ -29,7 +29,7 @@ const HomePage = () => {
                     navigate('/login');
                 } else {
                     const { data } = await axios.post(
-                        'http://localhost:3000/auth/user',
+                        'https://wellness360-backend-fn5j.vercel.app/auth/user',
                         {},
                         { withCredentials: true }
                     );
@@ -41,7 +41,7 @@ const HomePage = () => {
                         removeCookie('token');
                         navigate('/login');
                     } else {
-                        const response = await axios.get(`http://localhost:3000/users/workouts/${user.userId}`);
+                        const response = await axios.get(`https://wellness360-backend-fn5j.vercel.app/users/workouts/${user.userId}`);
                         setWorkouts(response.data);
                     }
                 }
@@ -69,7 +69,7 @@ const HomePage = () => {
         console.log(formData);
         console.log(userId);
         try {
-            const res = await axios.post('http://localhost:3000/users/workouts', { ...formData, userId });
+            const res = await axios.post('https://wellness360-backend-fn5j.vercel.app/users/workouts', { ...formData, userId });
             setWorkouts([...workouts, res.data]);
             console.log(res.data)
             setFormData({
@@ -100,7 +100,7 @@ const HomePage = () => {
     const handleUpdateWorkout = async (workoutId, updatedWorkout) => {
         try {
             console.log('workout id:' + workoutId);
-            await axios.put(`http://localhost:3000/users/workouts/${workoutId}`, updatedWorkout);
+            await axios.put(`https://wellness360-backend-fn5j.vercel.app/users/workouts/${workoutId}`, updatedWorkout);
             const updatedWorkouts = workouts.map(workout =>
                 workout._id === workoutId ? { ...updatedWorkout, editMode:false} : workout
             );
@@ -130,7 +130,7 @@ const HomePage = () => {
     
     const handleDeleteWorkout = async (workoutId) => {
         try {
-            await axios.delete(`http://localhost:3000/users/workouts/${workoutId}`);
+            await axios.delete(`https://wellness360-backend-fn5j.vercel.app/users/workouts/${workoutId}`);
             const updatedWorkouts = workouts.filter(workout => workout._id !== workoutId);
             setWorkouts(updatedWorkouts);
             toast.success('Workout deleted successfully', { position: 'top-right' });
