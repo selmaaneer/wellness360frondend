@@ -40,7 +40,7 @@ const handleSuccess = (msg) =>
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/auth/signup",
+        "https://wellness360-backend-fn5j.vercel.app/auth/signup",
         {
           ...inputValue,
         },
