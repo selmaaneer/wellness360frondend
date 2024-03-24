@@ -32,7 +32,7 @@ function SignInPage(props) {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/auth/login",
+        "https://wellness360-backend-fn5j.vercel.app/auth/login",
         {
           ...inputValue,
         },
