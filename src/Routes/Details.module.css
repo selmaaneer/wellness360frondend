@@ -1,0 +1,17 @@
+.NavLink{
+    text-decoration: none;
+    color: rgb(53, 50, 50);
+    font-weight:900;
+    font-family:Arial, Helvetica, sans-serif;
+  
+  }
+.headingPadding{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.SecondheadingPadding{
+    padding-bottom: 1rem;
+}
+.container{
+    padding-bottom: 2rem;
+}
