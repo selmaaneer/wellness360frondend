@@ -30,7 +30,7 @@ const ProfilePage = () => {
                 } else {
                     // Fetch user authentication data
                     const response = await axios.post(
-                        'https://wellness360-backend-fn5j.vercel.app/auth/user',
+                        'https://wellness360backend.vercel.app/auth/user',
                         {},
                         { withCredentials: true }
                     );
@@ -87,7 +87,7 @@ const ProfilePage = () => {
     const handleUpdateProfile = async () => {
         try {
             
-            await axios.put(`https://wellness360-backend-fn5j.vercel.app/profile/${userId}`, editedProfile);
+            await axios.put(`https://wellness360backend.vercel.app/profile/${userId}`, editedProfile);
           
             setUserProfile(editedProfile);
             
