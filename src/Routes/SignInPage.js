@@ -71,7 +71,9 @@ function SignInPage(props) {
           <input
             type="email"
             name="email"
-            value={inputValue.email}
+              autocomplete="email"
+
+            
             placeholder="Enter your email"
             onChange={handleOnChange}
           />
