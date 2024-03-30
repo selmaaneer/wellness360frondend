@@ -40,7 +40,7 @@ const handleSuccess = (msg) =>
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://wellness360backend.vercel.app/auth/signup",
+        "https://wellness360backendside.vercel.app/auth/signup",
         {
           ...inputValue,
         },
