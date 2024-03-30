@@ -83,7 +83,7 @@ function SignInPage(props) {
           <input
             type="password"
             name="password"
-            value={inputValue.password}
+             autocomplete="password"
             placeholder="Enter your password"
             onChange={handleOnChange}
           />
