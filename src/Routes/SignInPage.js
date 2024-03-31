@@ -71,9 +71,6 @@ function SignInPage(props) {
           <input
             type="email"
             name="email"
-              autocomplete="email"
-
-            
             placeholder="Enter your email"
             onChange={handleOnChange}
           />
@@ -83,7 +80,6 @@ function SignInPage(props) {
           <input
             type="password"
             name="password"
-             autocomplete="password"
             placeholder="Enter your password"
             onChange={handleOnChange}
           />
